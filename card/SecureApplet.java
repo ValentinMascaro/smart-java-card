@@ -1,3 +1,5 @@
+package card;
+
 import javacard.framework.*;
 
 public class SecureApplet extends Applet {
