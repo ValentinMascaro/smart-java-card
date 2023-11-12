@@ -1,0 +1,4 @@
+javac -source 1.2 -target 1.1 -g -cp /home/valentin/Documents/iotCps/oracle_javacard_sdks/jc211_kit/bin/api.jar card/SecureApplet.java
+javac -source 1.2 -target 1.1 -g -cp /home/valentin/Documents/iotCps/oracle_javacard_sdks/jc221_kit/lib/api.jar card/SecureApplet.java
+COMMANDE QUI MARCHE:
+java -classpath /home/valentin/Documents/iotCps/oracle_javacard_sdks/jc211_kit/bin/converter.jar com.sun.javacard.converter.Converter -verbose -exportpath /home/valentin/Documents/iotCps/oracle_javacard_sdks/jc211_kit/api_export_files -classdir /home/valentin/IdeaProjects/smart-java-card/ -applet 0xa0:0x0:0x0:0x0:0x62:0x3:0x1:0xc:0x6:0x1:0x24 SecureApplet card 0x0a:0x0:0x0:0x0:0x62:0x3:0x1:0x1:0xc:0x9:0x24 1.0
