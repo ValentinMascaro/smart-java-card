@@ -1,5 +1,5 @@
 package card;
-
+/* Remerciement à jc211/samples/com/sun/javacard/samples/wallet */
 import javacard.framework.*;
 import javacard.security.*;
 import java.math.BigInteger;
