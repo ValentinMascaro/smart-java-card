@@ -27,11 +27,7 @@ public class SecureApplet extends Applet {
     private RSAPrivateKey rsaPrivateKey;
     private RSAPublicKey rsaPublicKey;
 
-    private static final byte[] ASN1_SHA256 = {
-            (byte) 0x30, (byte) 0x31, (byte) 0x30, (byte) 0x0d, (byte) 0x06, (byte) 0x09, (byte) 0x60,
-            (byte) 0x86, (byte) 0x48, (byte) 0x01, (byte) 0x65, (byte) 0x03, (byte) 0x04, (byte) 0x02,
-            (byte) 0x01, (byte) 0x05, (byte) 0x00, (byte) 0x04, (byte) 0x20
-    };
+
     // CLA byte in the command APDU
     final static byte CLA_SIMPLEAPPLET = (byte) 0xB0;
 
