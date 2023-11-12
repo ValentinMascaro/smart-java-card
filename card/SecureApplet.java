@@ -145,30 +145,7 @@ public class SecureApplet extends Applet {
             ISOException.throwIt(code);
         }
     }
-    private void checkPin(byte[] bArray){
-            if (bArray[ISO7816.OFFSET_LC] != PIN_LENGTH) {
-                ISOException.throwIt(ISO7816.SW_WRONG_LENGTH);
-            }
-
-            if (!pin.check(bArray, ISO7816.OFFSET_CDATA, PIN_LENGTH)) {
-                short error;
-                switch (pin.getTriesRemaining()) {
-                    case 2:
-                        error = SW_PIN_FAILED_2;
-                        break;
-                    case 1:
-                        error = SW_PIN_FAILED_1;
-                        break;
-                    case 0:
-                        error = SW_BLOCKED;
-                        break;
-                    default:
-                        error = SW_PIN_FAILED_MORE;
-                        break;
-                }
-                ISOException.throwIt(error);
-            }
-        }
+    
 
     private void changePinFirst(APDU apdu) {
         byte[] buffer = apdu.getBuffer();
